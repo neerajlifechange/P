@@ -1,4 +1,7 @@
-# install_playwright.py
-pip install playwright
-playwright install
-pip install getindianname
+import subprocess
+
+# Install Playwright using pip
+subprocess.run(["pip", "install", "playwright"])
+
+# Install Playwright dependencies
+subprocess.run(["playwright", "install"])
