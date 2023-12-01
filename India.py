@@ -7,4 +7,4 @@ subprocess.run(["pip", "install", "playwright"])
 subprocess.run(["playwright", "install"])
 
 # Install getindianname using pip
-subprocess.run(["pip", "install", "getindianname"])
+subprocess.run(["pip", "install", "indian_names"])
