@@ -5,7 +5,7 @@ from concurrent.futures import ThreadPoolExecutor
 from playwright.async_api import async_playwright
 import nest_asyncio
 import random
-import Indian_names as indian_names  # Change the import statement
+import indian_names  # Change the import statement
 
 nest_asyncio.apply()
 
