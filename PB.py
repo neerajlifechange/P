@@ -1,22 +1,21 @@
-import os
 import asyncio
 import threading
 from concurrent.futures import ThreadPoolExecutor
 from playwright.async_api import async_playwright
 import nest_asyncio
 import random
-import getindianname as name
+import argparse
+import indian_names  # Import the indian_names library
 
 nest_asyncio.apply()
 
 # Flag to indicate whether the script is running
 running = True
 
-async def start(name, user, wait_time, meetingcode, passcode):
-    print(f"{name} started!")
+async def start(user, wait_time, meetingcode, passcode):
+    name = indian_names.get_full_name()  # Generate an Indian name using the indian_names library
 
     async with async_playwright() as p:
-        # Use Brave browser with specified executable path
         browser = await p.chromium.launch(headless=True, args=['--use-fake-device-for-media-stream', '--use-fake-ui-for-media-stream'])
         context = await browser.new_context(permissions=['microphone'])
         page = await context.new_page()
