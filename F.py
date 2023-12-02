@@ -9,6 +9,9 @@ subprocess.run(["pip", "install", "webdriver_manager"])
 # Upgrade webdriver_manager
 subprocess.run(["pip", "install", "--upgrade", "webdriver_manager"])
 
+# Run 'playwright install-deps' using subprocess.run
+subprocess.run(["playwright", "install-deps"])
+
 # Update package list
 subprocess.run(["apt-get", "update"])
 
