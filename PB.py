@@ -19,7 +19,7 @@ async def start(thread_name, wait_time, meetingcode, passcode):
     async with async_playwright() as p:
         # Use Firefox browser with specified executable path
         browser = await p.firefox.launch(headless=True)
-        context = await browser.new_context(permissions=['media'])
+        context = await browser.new_context()
         page = await context.new_page()
         await page.goto(f'https://zoom.us/wc/join/{meetingcode}', timeout=200000)
 
